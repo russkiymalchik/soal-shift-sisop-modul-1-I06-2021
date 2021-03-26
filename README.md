@@ -7,7 +7,9 @@ Collects information from application logs contained in the syslog.log file
 
 answer:
 
-```sudo less syslog.log```
+```
+sudo less syslog.log
+```
 
 explanation :
 
