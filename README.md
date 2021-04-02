@@ -60,7 +60,7 @@ In this case, we use awk to solve this kind of problem. First, we declare variab
 LC_NUMERIC=C awk -v profit=0 '
 BEGIN { FS="\t"; transid=1; max=0 }
 ```
-From the table of data, we know that sales is in the column 18 and profit in the column 21. Next, implement the profit percentage formula into the program.
+From the table of data, we know that Sales is in the column 18 and Profit in the column 21. Next, implement the profit percentage formula into the program.
 ```
 profit = ($21/($18-$21))*100;
 ```
@@ -76,6 +76,38 @@ END { print "The last transaction with the largest", transid, "with a percentage
 ```
 
 #### 2B
+Clemong has a promotional plan in Albuquerque using the MLM method. Therefore, Clemong needs a list of customer names on the 2017 transaction in Albuquerque.
+
+Answer:
+In this case, we use awk again to solve this kind of problem. First, write the initial condition to do awk and print the header.
+```
+awk '
+BEGIN { FS="\t";
+print "The list of customer names in Albuquerque in 2017 includes:"}
+```
+From the table of data, we know that Order Date is in the column 3 and City is in the column 10. After that, we create the function to read the year in order date as we shown in below.
+```
+    date = $3;
+    city = $10;
+
+    #declare yy as 2 digits years (in this case we need 17)
+    yy = substr(date, 7, 2);
+    if (NR != 1)
+    { if (yy == 17 && city == "Albuquerque")
+       { person[$7]; }
+    }
+```
+
+```yy = substr(date, 7, 2);``` means we get only two characters from the order date column starting from the seventh sequence from the initial character.
+
+```{ if (yy == 17 && city == "Albuquerque") { person[$7]; }``` means if year is 17 and city is Albuquerque, store the name of this person in the array.
+
+Last, print out all the data that we store before in the array.
+```
+END { for (name in person) 
+    { print name; }
+    printf "\n"; }
+```
 
 #### 2C
 
