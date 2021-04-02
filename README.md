@@ -3,8 +3,8 @@
 1. Hilmy Hanif 									(05111942000003)
 2. Juan Carlos Tepanus Pardosi  (05111942000017)
 3. Khairi Wiryawan              (05111942000023)
-### Problem 1
-#### 1A 
+## Problem 1
+### 1A 
 
 Collects information from application logs contained in the syslog.log file
 
@@ -20,7 +20,7 @@ for the 1A we were asked to get information from the syslog. therefore we can ty
 ```sudo less [logname].log```
 in order to see the information inside the log file
 
-#### 1B
+### 1B
 
 
 Display all error messages that appear along with the number of occurrences
@@ -39,13 +39,13 @@ We were requested to display message that only have "ERROR" in it. here come the
 
 Next, we need to count how much line that contain "ERROR". ```grep -c "ERROR" syslog.log```came to count lines for matched words. We save the value into the variable ```error``` that later we print out ```echo "${error}"```
 
-### Problem 2
+## Problem 2
 
 Steven and Manis founded a startup called “TokoShiSop”, While you and Clemong are the first employees of TokoShiShop. After three years of work, Clemong was appointed to be TokoShiSop’s sales manager, while you became the head of the warehouse who supervised entry and exit of goods.
 
 Every year, TokoShiSop holds a meeting that discusses how sales results and future strategies will be implemented. You’ve been very prepared for this year’s meeting. But suddenly, Steven, Manis, and Clemong ask you to look for some conclusions from the “Laporan-TokoShiSop.tsv” sales data.
 
-#### 2A
+### 2A
 
 Steven wants to appreciate the performance of his employees so far by knowing Row ID and the largest profit percentage (if the largest profit percentage is more than 1, take the largest Row ID). To make your work easier, Clemong provides the definition of profit percentage, i.e.:
 ```
@@ -75,7 +75,7 @@ In the end, print out the last transaction with the biggest profit and print out
 END { print "The last transaction with the largest", transid, "with a percentage of", max,"%\n"}
 ```
 
-#### 2B
+### 2B
 
 Clemong has a promotional plan in Albuquerque using the MLM method. Therefore, Clemong needs a list of customer names on the 2017 transaction in Albuquerque.
 
@@ -111,7 +111,7 @@ END { for (name in person)
     printf "\n"; }
 ```
 
-#### 2C
+### 2C
 
 TokoShiSop focuses on three customer segments, among others: Home Offices, Customers, and Corporates. Clemong wants to increase sales in the customer segment that has the least sales. Therefore, Clemong needs a customer segment and the number of transactions with the least amount of transactions.
 
@@ -160,6 +160,6 @@ Last, print out the type of customer segment with the least sales with its total
 { print "The type of customer segment with the least sales is", seg ,"with", res ,"transactions.\n"}
 ```
 
-#### 2D
+### 2D
 
 TokoShiSop divides the sales region into four parts: Central, East, South, and West. Manis wants to find the region that has the least total profit and the total profit of that region.
