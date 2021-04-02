@@ -38,3 +38,42 @@ print "The list of customer names in Albuquerque in 2017 includes:"}
 END { for (name in person) 
     { print name; }
     printf "\n"; } ' Laporan-TokoShiSop.tsv >> hasil.txt
+
+#Answer Number 2C
+awk '
+BEGIN { FS="\t";
+        res=a=b=c=0;
+        seg="Corporate"
+      }
+
+{ #declare a as Corporate Segment
+  if($8 == "Corporate")
+  a++;
+  #declare b as Consumer Segment
+  if($8 == "Consumer")
+  b++;
+  #declare c as Home Office Segment
+  if($8 == "Home Office")
+  c++; }
+
+END { 
+      #assume Corporate has the least sales
+      res=a;
+
+      #update if Consumer has the least sales rather than Corporate
+      if(b < res) 
+      {
+        res=b;
+        seg = "Consumer";
+      }
+
+      #update if Home Office has the least sales rather than the previous one
+      if(c < res)
+      {
+        res=c;
+        seg = "Home Office"
+      } 
+
+{ print "The type of customer segment with the least sales is", seg ,"with", res ,"transactions.\n"}
+    }
+' Laporan-TokoShiSop.tsv >> hasil.txt
