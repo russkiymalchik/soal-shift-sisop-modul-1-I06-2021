@@ -1,7 +1,10 @@
 # soal-shift-sisop-modul-1-I06-2021
-
-## 1
-#### A 
+## Members Name:
+1. Hilmy Hanif                  (05111942000003)
+2. Juan Carlos Tepanus Pardosi  (05111942000017)
+3. Khairi Wiryawan              (05111942000023)
+### 1
+##### A 
 
 Collects information from application logs contained in the syslog.log file
 
@@ -17,7 +20,7 @@ for the 1A we were asked to get information from the syslog. therefore we can ty
 ```sudo less [logname].log```
 in order to see the information inside the log file
 
-### B
+#### B
 
 
 Display all error messages that appear along with the number of occurrences
