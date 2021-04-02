@@ -5,3 +5,5 @@ Benjamin Farhat
 David Wiener
 Michelle Lonsdale
 Susan Vittorini
+
+The type of customer segment with the least sales is Home Office with 1783 transactions.
