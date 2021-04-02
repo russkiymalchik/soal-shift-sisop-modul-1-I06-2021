@@ -76,9 +76,11 @@ END { print "The last transaction with the largest", transid, "with a percentage
 ```
 
 #### 2B
+
 Clemong has a promotional plan in Albuquerque using the MLM method. Therefore, Clemong needs a list of customer names on the 2017 transaction in Albuquerque.
 
 Answer:
+
 In this case, we use awk again to solve this kind of problem. First, write the initial condition to do awk and print the header.
 ```
 awk '
@@ -102,7 +104,7 @@ From the table of data, we know that Order Date is in the column 3 and City is i
 
 ```{ if (yy == 17 && city == "Albuquerque") { person[$7]; }``` means if year is 17 and city is Albuquerque, store the name of this person in the array.
 
-Last, print out all the data that we store before in the array.
+Last, print out all the name of person that we store before in the array.
 ```
 END { for (name in person) 
     { print name; }
@@ -111,4 +113,53 @@ END { for (name in person)
 
 #### 2C
 
+TokoShiSop focuses on three customer segments, among others: Home Offices, Customers, and Corporates. Clemong wants to increase sales in the customer segment that has the least sales. Therefore, Clemong needs a customer segment and the number of transactions with the least amount of transactions.
+
+Answer:
+
+In this case, we use awk again to solve this kind of problem. As usual, write the initial condition to do awk and declare the variable that we want to use.
+```
+awk '
+BEGIN { FS="\t";
+        res=a=b=c=0;
+        seg="Corporate"
+      }
+```
+Next, get the data from Segment table which is in column 8. Divide into three condition, "a" for Corporate, "b" for Consumer, and "c" for Home Office.
+```
+  if($8 == "Corporate")
+  a++;
+  if($8 == "Consumer")
+  b++;
+  if($8 == "Home Office")
+  c++;
+```
+Assume that Corporate has the least sales
+```
+      res=a;
+```
+
+Update if Consumer has the least sales rather than Corporate
+```
+      if(b < res) 
+      {
+        res=b;
+        seg = "Consumer";
+      }
+```
+Update again if Home Office has the least sales rather than the previous one
+```
+      if(c < res)
+      {
+        res=c;
+        seg = "Home Office"
+      } 
+```
+Last, print out the type of customer segment with the least sales with its total transactions.
+```
+{ print "The type of customer segment with the least sales is", seg ,"with", res ,"transactions.\n"}
+```
+
 #### 2D
+
+TokoShiSop divides the sales region into four parts: Central, East, South, and West. Manis wants to find the region that has the least total profit and the total profit of that region.
