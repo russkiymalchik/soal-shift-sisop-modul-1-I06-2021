@@ -4,40 +4,44 @@
 2. Juan Carlos Tepanus Pardosi  (05111942000017)
 3. Khairi Wiryawan              (05111942000023)
 ## Problem 1
+Ryujin has just been accepted as an IT support at Bukapedia. He was given the task of making daily reports for the company's internal application, ticky. There are 2 reports that he has to make, namely the report on the list of most error message ratings made by Ticky and user usage reports on the Ticky application. In order to make this report, Ryujin had to do the following:
 ### 1A 
 
-Collects information from application logs contained in the syslog.log file
+Collects information from application logs contained in the syslog.log file. The information required includes: log type (ERROR / INFO), log messages, and the username on each log line. Since Ryujin finds it difficult to check one line at a time manually, he uses regex to make his job easier. Help Ryujin create the regex.
 
 answer:
 
 ```
-sudo less syslog.log
+grep -i '[error|info].*' syslog.log
 ```
 
 explanation :
 
-for the 1A we were asked to get information from the syslog. therefore we can type a command
-```sudo less [logname].log```
-in order to see the information inside the log file
+The question asked us to make regex (Regular Expression) that can help Ryujin. Here, we use grep command ```grep [options] pattern [files]``` as we all know that grep stands for  "globally search for regular expression and print out".
+
+For the options, we chose to use ```-i```  in purpose to ignores, case for matching, or in other words to make the regex "case insensitive".
+
+the pattern for the regex is ```[error|info].*``` in purpose to check and print out the line that contain error/info information.
 
 ### 1B
 
 
-Display all error messages that appear along with the number of occurrences
+Then, Ryujin must display all error messages that appear along with the number of occurrences.
 
 answer:
 
 ```
-grep -w "ERROR" syslog.log
-error=$(grep -c "ERROR" syslog.log)
-
-echo "${error}"
+cat syslog.log|grep ERROR|cut -d ":" -f4|cut -d "(" -f1|sort|uniq -c
 ```
 
 explanation:
-We were requested to display message that only have "ERROR" in it. here come the ```grep```. Here, ```grep -w "ERROR" syslog.log```, the grep command to select only those lines that contain matches to form whole words.
+First, we need to concatenate the file ```cat filename.format``` that we work on in order to reads data from that certain file and gives their content as output.
 
-Next, we need to count how much line that contain "ERROR". ```grep -c "ERROR" syslog.log```came to count lines for matched words. We save the value into the variable ```error``` that later we print out ```echo "${error}"```
+After that, we sort the line that contain only error message by ```grep ERROR```. 
+
+Next, we need to categorised the error based on the error message by first cut the line start from ```cut -d ":" -f4``` until ```cut -d "(" -f1```.
+
+for sorting and counting sake, we use command of ```sort|uniq| -c```.
 
 ## Problem 2
 
