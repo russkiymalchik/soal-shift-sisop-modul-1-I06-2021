@@ -238,3 +238,25 @@ fdupes -d /home/hilmyhnf/Koleksi
 
 ### 3B
 Because Kuuhaku is too lazy to run the script manually, he also asks you to run the script once a day at 8 o'clock in the evening for some specific dates every month, namely starting the 1st every seven days (1,8, ...), as well as from the 2nd once every four days (2,6, ...). To tidy it up, the downloaded images and logs are moved to a folder named the download date with the format "DD-MM-YYYY" (example: "13-03-2023").
+
+answer:
+- bash script to move "Koleksi_XX" files and Foto.log to destination directory 
+```
+#!bit/bash
+
+# rerun soal3a.sh script
+bash soal3a.sh
+
+# set the destination directory
+destination="$(date +%d-%m-%Y)"
+
+# make the directory destination
+mkdir /home/hilmyhnf/$destination
+
+# move all Koleksi files to directory destination
+mv Koleksi_* /home/hilmyhnf/$destination
+
+# move Foto.log to directory destination
+mv Foto.log /home/hilmyhnf/$destination
+
+```
