@@ -146,7 +146,7 @@ When we run program 2B, we got some error. The first error is because we were wr
 
 ![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/error%202B_code1.png)
 
-The second error is the result do not want print the statement "The list of customer names in Albuquerque in 2017 includes:" before persons name.
+The second error is the result do not want to print out the statement "The list of customer names in Albuquerque in 2017 includes:" before persons name.
 
 ![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/error%202B_result.png)
 
