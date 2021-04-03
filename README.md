@@ -260,3 +260,7 @@ mv Koleksi_* /home/hilmyhnf/$destination
 mv Foto.log /home/hilmyhnf/$destination
 
 ```
+- crontab to run soal3.bsh
+```
+0 20 1-31/7,2-31/4 * * /bin/bash /home/hilmyhnf/Koleksi/soal3b.sh
+```
