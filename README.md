@@ -1,7 +1,7 @@
 # soal-shift-sisop-modul-1-I06-2021
 ## Group Member Name:
 1. Khairi Wiryawan                      (05111942000023)
-2. 2. Juan Carlos Tepanus Pardosi       (05111942000017)
+2. Juan Carlos Tepanus Pardosi          (05111942000017)
 3. Hilmy Hanif 							(05111942000003)
 
 ## Problem 1
