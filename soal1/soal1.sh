@@ -1,10 +1,11 @@
 #!/bin/bash
 
-#a
-sudo less syslog.log
+#1a.
+grep -i '[error|info].*' syslog.log
 
-#b
-grep -w "ERROR" syslog.log
-error=$(grep -c "ERROR" syslog.log)
+#1b.
+cat syslog.log|grep ERROR|cut -d ":" -f4|cut -d "(" -f1|sort|uniq -c
 
-echo "${error}"
+#1c.
+cat syslog.log|grep ERROR|cut -d "(" -f2| cut -d ")" -f1|sort|uniq -c
+cat syslog.log|grep INFO|cut -d "(" -f2| cut -d ")" -f1|sort|uniq -c
