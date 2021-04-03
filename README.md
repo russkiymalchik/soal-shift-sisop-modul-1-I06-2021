@@ -44,6 +44,20 @@ Next, we need to categorised the error based on the error message by first cut t
 
 for sorting and counting sake, we use command of ```sort|uniq| -c```.
 
+### 1C
+Ryujin must also be able to display the number of occurrences of the ERROR and INFO logs for each user
+
+answer :
+```
+cat syslog.log|grep ERROR|cut -d "(" -f2| cut -d ")" -f1|sort|uniq -c
+cat syslog.log|grep INFO|cut -d "(" -f2| cut -d ")" -f1|sort|uniq -c
+```
+explanation :
+
+1C question is quite similar with 1B. The differences is that we need to count and cattegorise amount of error/info from certain user and then list them.
+
+so the difference here in the cut proccess. we need to cut error/info only by the username of each line. that is why we only pick between "(" and ")" ```cut -d "(" -f2| cut -d ")" -f1```.
+
 ## Problem 2
 
 Steven and Manis founded a startup called “TokoShiSop”, While you and Clemong are the first employees of TokoShiShop. After three years of work, Clemong was appointed to be TokoShiSop’s sales manager, while you became the head of the warehouse who supervised entry and exit of goods.
