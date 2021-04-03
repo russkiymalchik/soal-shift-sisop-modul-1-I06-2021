@@ -143,15 +143,12 @@ END { for (name in person)
 Error when solving problem:
 
 When we run program 2B, we got some error. The first error is because we were wrong when declaring the variable ```date = $3; city = $10;```. It should be outside the BEGIN statement, but we input it in BEGIN statement.
-
 ![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/error%202B_code1.png)
 
-The second error is the result do not want to print out the statement "The list of customer names in Albuquerque in 2017 includes:" before persons name.
-
+The second error is the result do not want print the statement "The list of customer names in Albuquerque in 2017 includes:" before persons name.
 ![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/error%202B_result.png)
 
 This error is because we use ```echo``` when we want to print out in the END statement. So, as the solution we use ```print``` instead of using ```echo``` . After that, we move that into BEGIN statement instead of print out in END statement.
-
 ![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/error%202B_code.png)
 
 Below is the result of Problem 2B:
@@ -223,3 +220,14 @@ TokoShiSop divides the sales region into four parts: Central, East, South, and W
 Kuuhaku is a person who really likes to collect digital photos, but Kuuhaku is also a lazy person so he doesn't want to bother looking for photos, besides that he is also shy, so he doesn't want anyone to see his collection, unfortunately, he has a friend named Steven who made being nosy his primary responsibility. Kuuhaku then had an idea, a way so that Steven won't be able to see his collection. To make his life easier, he is asking for your help. The idea is:
 ### 3A
 Make a script to download 23 images from "https://loremflickr.com/320/240/kitten" and save the logs to the file "Foto.log". Since the downloaded images are random, it is possible that the same image is downloaded more than once, therefore you have to delete the same image (no need to download new images to replace them). Then save the images with the name "Kumpulan_XX" with consecutive numbers without missing any number (example: Koleksi_01, Koleksi_02, ...)
+```
+#!bin/bash
+
+for((i=1; i<=23; i++))
+do
+        wget -O Koleksi_$i https://loremflickr.com/320/240/kitten -a Foto.log
+done
+
+fdupes /home/hilmyhnf/Koleksi
+```
+
