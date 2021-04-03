@@ -6,4 +6,4 @@ do
 done
 
 #remove duplicate in directory
-fdupes /home/hilmyhnf/Koleksi
+fdupes -d /home/hilmyhnf/Koleksi
