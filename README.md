@@ -2,7 +2,7 @@
 ## Group Member Name:
 1. Khairi Wiryawan                      (05111942000023)
 2. Juan Carlos Tepanus Pardosi          (05111942000017)
-3. Hilmy Hanif 							(05111942000003)
+3. Hilmy Hanif Ibrahim					(05111942000003)
 
 ## Problem 1
 Ryujin has just been accepted as an IT support at Bukapedia. He was given the task of making daily reports for the company's internal application, ticky. There are 2 reports that he has to make, namely the report on the list of most error message ratings made by Ticky and user usage reports on the Ticky application. In order to make this report, Ryujin had to do the following:
