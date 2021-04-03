@@ -98,7 +98,8 @@ Result Problem 2A:
 ![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/Result%202A.png)
 
 Error when solving problem:
-We got an error when we want to run program 2A. The error is because we were wrong when declaring the variable ```profit=0```. It should be before the BEGIN statement, but we input it into BEGIN statement.
+
+We got an error when we run program 2A. The error is because we were wrong when declaring the variable ```profit=0```. It should be before the BEGIN statement, but we input it into BEGIN statement.
 
 ![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/error%202A.png)
 
@@ -143,6 +144,14 @@ Result Problem 2B:
 
 Error when solving problem:
 
+When we run program 2B, we got some error. The first error is because we were wrong when declaring the variable ```date = $3; city = $10;```. It should be outside the BEGIN statement, but we input it in BEGIN statement.
+![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/error%202B_code1.png)
+
+The second error is the result do not want print the statement "The list of customer names in Albuquerque in 2017 includes:" before persons name.
+![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/error%202B_result.png)
+
+This error is because we use ```echo``` when we want to print out in the END statement. So, as the solution we use ```print``` instead of using ```echo``` . After that, we move that into BEGIN statement instead of print out in END statement.
+![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/error%202B_code.png)
 
 ### 2C
 
