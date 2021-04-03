@@ -93,10 +93,14 @@ In the end, print out the last transaction with the biggest profit and print out
 ```
 END { print "The last transaction with the largest", transid, "with a percentage of", max,"%\n"}
 ```
-Result Number 2A:
+Result Problem 2A:
 
 ![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/Result%202A.png)
 
+Error when solving problem:
+We got an error when we want to run program 2A. The error is because we were wrong when declaring the variable ```profit=0```. It should be before the BEGIN statement, but we input it into BEGIN statement.
+
+![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/error%202A.png)
 
 ### 2B
 
@@ -133,9 +137,11 @@ END { for (name in person)
     { print name; }
     printf "\n"; }
 ```
-Result Number 2B:
+Result Problem 2B:
 
 ![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/Result%202B.png)
+
+Error when solving problem:
 
 
 ### 2C
@@ -186,9 +192,11 @@ Last, print out the type of customer segment with the least sales with its total
 ```
 { print "The type of customer segment with the least sales is", seg ,"with", res ,"transactions.\n"}
 ```
-Result Number 2C:
+Result Problem 2C:
 
 ![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/Result%202C.png)
+
+Error when solving problem:
 
 ### 2D
 
