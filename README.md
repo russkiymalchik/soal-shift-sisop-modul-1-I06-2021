@@ -24,6 +24,8 @@ For the options, we chose to use ```-i```  in purpose to ignores, case for match
 
 the pattern for the regex is ```[error|info].*``` in purpose to check and print out the line that contain error/info information. after that, we cut the line ```cut -d ":" -f4``` only start from Error/Info, messages, and users
 
+![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/Result%20%201a.jpg)
+
 ### 1B
 
 
@@ -42,6 +44,8 @@ Next, we need to categorised the error based on the error message by first cut t
 
 for sorting and counting sake, we use command of ```sort|uniq| -c```.
 
+![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/Result%20%201b.jpg)
+
 ### 1C
 Ryujin must also be able to display the number of occurrences of the ERROR and INFO logs for each user
 
@@ -58,6 +62,9 @@ explanation :
 1C question is quite similar with 1B. The differences is that we need to count and cattegorise amount of error/info from certain user and then list them.
 
 so the difference here in the cut proccess. we need to cut error/info only by the username of each line. that is why we only pick between "(" and ")" ```cut -d "(" -f2| cut -d ")" -f1```.
+
+![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/Result%201c.jpg)
+
 
 ## Problem 2
 
