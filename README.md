@@ -47,7 +47,10 @@ Ryujin must also be able to display the number of occurrences of the ERROR and I
 
 answer :
 ```
+#Show error
 cat syslog.log|grep ERROR|cut -d "(" -f2| cut -d ")" -f1|sort|uniq -c
+
+#Show Info
 cat syslog.log|grep INFO|cut -d "(" -f2| cut -d ")" -f1|sort|uniq -c
 ```
 explanation :
