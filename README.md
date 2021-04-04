@@ -246,7 +246,9 @@ done
 fdupes -d /home/hilmyhnf/Koleksi
 ```
 Result :
+
 ![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/result%203a%20(1).png)
+
 ![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/result%203a%20(2).png)
 
 
@@ -275,7 +277,9 @@ mv Foto.log /home/hilmyhnf/$destination
 
 ```
 Result :
+
 ![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/result%203b%20(1).png)
+
 ![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/result%203b%20(2).png)
 
 - crontab to run soal3.bsh
