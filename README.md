@@ -219,10 +219,17 @@ Last, print out the type of customer segment with the least sales with its total
 
 Error when solving problem:
 
+We got some error when we run the program 2C. The first is little error, because we forget to add close bracket in the end of syntax
+
+![alt text](htps://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/error%202C_result.png)
+
+The next error is the output is not the same as what we expected. The program print out all the data when we run it.
+
+![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/error%202C_result1.png)
+
 Below is the result of Problem 2C:
 
 ![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/Result%202C.png)
-
 
 ### 2D
 
