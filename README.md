@@ -13,16 +13,16 @@ Collects information from application logs contained in the syslog.log file. The
 answer:
 
 ```
-grep -i '[error|info].*' syslog.log
+cat syslog.log|grep -E -i '[error|info].*'|cut -d ":" -f4
 ```
 
 explanation :
 
 The question asked us to make regex (Regular Expression) that can help Ryujin. Here, we use grep command ```grep [options] pattern [files]``` as we all know that grep stands for  "globally search for regular expression and print out".
 
-For the options, we chose to use ```-i```  in purpose to ignores, case for matching, or in other words to make the regex "case insensitive".
+For the options, we chose to use ```-i```  in purpose to ignores, case for matching, or in other words to make the regex "case insensitive" and we ise ```-E``` in order to treat pattern as an extended regular expression.
 
-the pattern for the regex is ```[error|info].*``` in purpose to check and print out the line that contain error/info information.
+the pattern for the regex is ```[error|info].*``` in purpose to check and print out the line that contain error/info information. after that, we cut the line ```cut -d ":" -f4``` only start from Error/Info, messages, and users
 
 ### 1B
 
@@ -36,9 +36,7 @@ cat syslog.log|grep ERROR|cut -d ":" -f4|cut -d "(" -f1|sort|uniq -c
 ```
 
 explanation:
-First, we need to concatenate the file ```cat filename.format``` that we work on in order to reads data from that certain file and gives their content as output.
-
-After that, we sort the line that contain only error message by ```grep ERROR```. 
+we sort the line that contain only error message by ```grep ERROR```. 
 
 Next, we need to categorised the error based on the error message by first cut the line start from ```cut -d ":" -f4``` until ```cut -d "(" -f1```.
 
