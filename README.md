@@ -65,6 +65,8 @@ so the difference here in the cut proccess. we need to cut error/info only by th
 
 ![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/Result%201c.jpg)
 
+#### Obstacle question 1
+Difficulties that we faced during the working process is that our knowledge about commands were so limited. so that we trying to figure it out by discussing among group members, and also with other fellow students during revision session.
 
 ## Problem 2
 
