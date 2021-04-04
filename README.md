@@ -263,7 +263,7 @@ destination="$(date +%d-%m-%Y)"
 # make the directory destination
 mkdir /home/hilmyhnf/$destination
 
-# move all Koleksi files to directory destination
+# move all Koleksi_XX files to directory destination
 mv Koleksi_* /home/hilmyhnf/$destination
 
 # move Foto.log to directory destination
