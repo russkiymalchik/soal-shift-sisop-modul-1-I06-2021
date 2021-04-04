@@ -245,6 +245,10 @@ done
 
 fdupes -d /home/hilmyhnf/Koleksi
 ```
+Result :
+![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/result%203a%20(1).png)
+![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/result%203a%20(2).png)
+
 
 ### 3B
 Because Kuuhaku is too lazy to run the script manually, he also asks you to run the script once a day at 8 o'clock in the evening for some specific dates every month, namely starting the 1st every seven days (1,8, ...), as well as from the 2nd once every four days (2,6, ...). To tidy it up, the downloaded images and logs are moved to a folder named the download date with the format "DD-MM-YYYY" (example: "13-03-2023").
@@ -270,6 +274,10 @@ mv Koleksi_* /home/hilmyhnf/$destination
 mv Foto.log /home/hilmyhnf/$destination
 
 ```
+Result :
+![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/result%203b%20(1).png)
+![alt text](https://github.com/russkiymalchik/soal-shift-sisop-modul-1-I06-2021/blob/main/screenshots/result%203b%20(2).png)
+
 - crontab to run soal3.bsh
 ```
 0 20 1-31/7,2-31/4 * * /bin/bash /home/hilmyhnf/Koleksi/soal3b.sh
