@@ -7,5 +7,8 @@ cat syslog.log|grep -E -i '[error|info].*'|cut -d ":" -f4
 cat syslog.log|grep ERROR|cut -d ":" -f4|cut -d "(" -f1|sort|uniq -c
 
 #1c.
+#Show Error
 cat syslog.log|grep ERROR|cut -d "(" -f2| cut -d ")" -f1|sort|uniq -c
+
+#Show Info
 cat syslog.log|grep INFO|cut -d "(" -f2| cut -d ")" -f1|sort|uniq -c
